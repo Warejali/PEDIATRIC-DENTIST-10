@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Service.css'
 
 const Service = ({ service }) => {
     const { name, price, description, img, id } = service;
@@ -9,18 +10,18 @@ const Service = ({ service }) => {
         console.log('clicked');
     }
     return (
-        <div class="col">
+        <div class="col p-3">
             <div class="card h-100">
-                <img src={img} class="card-img-top" alt="..." />
+                <img src={img} class="card-img-top p-3" alt="..." />
                 <div class="card-body">
                     <h5 class="card-title">{name}</h5>
                     <p class="card-text">{description}</p>
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                  
-                        <p class=" text-white bg-success w-100 py-2">Price: {price}$</p>
+                        <p class="alert-primary fw-bold text-center w-100 py-2">Price: {price}$</p>
                   
-                    <p onClick={() => goToCheckOut(id)} class="text-white bg-warning w-100 py-2">APPOINTMENT</p>
+                    <p onClick={() => goToCheckOut(id)} className="appointment alert-info text-center w-100 py-2 fw-bold">APPOINTMENT</p>
                 </div>
             </div>
         </div>
