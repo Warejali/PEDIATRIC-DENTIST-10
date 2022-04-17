@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Teeth extraction",
+        "price": "150",
+        "description": "It performing needed tooth extractions services quickly and painlessly.",
+        "img": "https://i.ibb.co/6gKdHD8/Exractions.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Dental implants",
+        "price": "100",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://i.ibb.co/HhY5cFT/Dental-implants.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Jaw Surgery",
+        "price": "150",
+        "description": "Corrects irregularities of the jaw bones and realigns the jaws and teeth to improve the way they work.",
+        "img": "https://i.ibb.co/DRL4CKQ/Jaw-Surgery.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Jaw reconstruction",
+        "price": "180",
+        "description": "It will dramatically improve the cosmetic appearance of both your teeth and jaws.",
+        "img": "https://i.ibb.co/7zm9bTc/Jaw-reconstructio.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Wisdom Teeth Removal",
+        "price": "100",
+        "description": "You shouldn't feel any pain as your wisdom teeth are removed because the area will be numb.",
+        "img": "https://i.ibb.co/gMVSbzY/Wisdom-Teeth-Removal.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Impacted Canines",
+        "price": "300",
+        "description": " Patients frequently develop problems with impacted third molar (wisdom) teeth.",
+        "img": "https://i.ibb.co/37xDnDB/Impacted-Canines.jpg"
+    }
+]
