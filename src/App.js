@@ -2,6 +2,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
+import AboutDoctor from './components/AboutDoctor/AboutDoctor';
 import Blogs from './components/Blogs/Blogs';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -33,6 +34,7 @@ function App() {
           </RequireAuth>
         }></Route>
         <Route path='/thankyou' element={<ThankYou></ThankYou>}></Route>
+        <Route path='/doctor' element={<AboutDoctor></AboutDoctor>}></Route>
         <Route path='/*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
