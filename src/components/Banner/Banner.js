@@ -22,8 +22,8 @@ const Banner = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>Welcome to Pediatric Dentist! </h3>
+            <p>In addition to working in private practice, my full-time</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -34,7 +34,7 @@ const Banner = () => {
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
+            <h3>Creating Beautiful Smiles</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -46,9 +46,9 @@ const Banner = () => {
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+            <h3>Right Dentist for You</h3>
             <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            WE ARE EXCITED TO ANNOUNCE THE RETURN OF OUR PRACTICE!.
             </p>
           </Carousel.Caption>
         </Carousel.Item>

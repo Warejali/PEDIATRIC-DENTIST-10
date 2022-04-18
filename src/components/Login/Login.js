@@ -48,14 +48,11 @@ const Login = () => {
         }
     }
 
-    let errorElement;
+    
     if (error) {
-        return (
-            errorElement = <div>
-                <p>Error: {error.message}</p>
-            </div>
-        );
+       <p className='text-danger'>Error: {error.message}</p>
     }
+
     if (loading) {
         return <Loading></Loading>;
     }
@@ -77,7 +74,6 @@ const Login = () => {
                         <Form.Label>Email address</Form.Label>
                         <Form.Control onBlur={emailInput} type="email" required />
                     </Form.Group>
-
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control onBlur={passwordInput} type="password" required />
@@ -86,7 +82,6 @@ const Login = () => {
                     <Button className='mx-auto w-50 d-block' onClick={() => signInWithEmailAndPassword(email, password)} variant="primary" type="submit">
                         Login
                     </Button>
-                    {errorElement}
                 </Form>
                 <div className='text-center'>
                     <p>Are You New Patient? <span className='btn text-primary fw-bold' onClick={goToRegister}>Please register</span></p>

@@ -20,6 +20,9 @@ const Register = () => {
     const goToLogin = () => {
         navigate('/login')
     }
+    if (error || error1) {
+        return <p className='text-danger'>Error: {error?.message} {error1?.message}</p>
+    }
     if (loading || updating) {
         return <Loading></Loading>;
     }
