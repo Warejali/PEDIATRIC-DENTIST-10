@@ -1,0 +1,20 @@
+.about-section{
+    margin-bottom: 100px;
+}
+.img-part{ 
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+.about-image{ 
+    border-radius: 25px;
+}
+.about-title{
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.text-part{
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-top: 15px;
+}

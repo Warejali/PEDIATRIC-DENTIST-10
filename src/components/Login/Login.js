@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Button, Form } from 'react-bootstrap';
 import SocialLogin from './SocialLogin/SocialLogin';
 import './Login.css'
+import Loading from '../Loading/Loading';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -21,6 +22,8 @@ const Login = () => {
     );
 
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/'
     const submitHandle = (event) => {
         event.preventDefault();
     }
@@ -47,12 +50,12 @@ const Login = () => {
         );
     }
     if (loading) {
-        return <p>Loading...</p>;
+        return <Loading></Loading>;
     }
 
     if (user) {
         return (
-            navigate('/')
+            navigate(from)
         );
     }
     const goToRegister = () => {
