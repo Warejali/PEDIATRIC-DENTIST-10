@@ -1,6 +1,6 @@
 # PEDIATRIC DENTIST
 
-Our live website link: [https://independent-service-prov-cf3b8.web.app/](https://independent-service-prov-cf3b8.web.app).
+Our live website link: [https://independent-service-provider-warejali.netlify.app/](https://independent-service-provider-warejali.netlify.app).
 
 
 
