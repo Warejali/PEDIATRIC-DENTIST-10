@@ -6,6 +6,8 @@ import { Button, Form } from 'react-bootstrap';
 import SocialLogin from './SocialLogin/SocialLogin';
 import './Login.css'
 import Loading from '../Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -37,8 +39,13 @@ const Login = () => {
         setPassword(userPassword)
     }
     const goToReset = async (event) => {
-        await sendPasswordResetEmail(email);
-        alert('Sent email');
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Send password reset link to Your registered email address.');
+        }
+        else{
+            toast('Please enter Your registered email address.');
+        }
     }
 
     let errorElement;
@@ -86,6 +93,7 @@ const Login = () => {
                     <p>Forgotten Password? <span className='btn fw-bold text-primary' onClick={() => goToReset()}>Reset </span></p>
                 </div>
                 <SocialLogin></SocialLogin>
+                <ToastContainer />
             </div>
         </div>
     );

@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Register.css'
 
@@ -13,18 +14,16 @@ const Register = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth ,{sendEmailVerification:true});
-      const [updateProfile, updating, error1] = useUpdateProfile(auth);
-
-
-    // const emailRef = useRef('');
-    // const PasswordRef = useRef('');
-    // const confirmPasswordRef = useRef('');
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, error1] = useUpdateProfile(auth);
     const navigate = useNavigate();
-    const goToLogin =()=>{
+    const goToLogin = () => {
         navigate('/login')
     }
-    const submitHandle = async(event) =>{
+    if (loading || updating) {
+        return <Loading></Loading>;
+    }
+    const submitHandle = async (event) => {
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
@@ -32,13 +31,13 @@ const Register = () => {
         console.log(email, password);
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
-          console.log('Updated profile');
-          navigate('/home')
+        console.log('Updated profile');
+        navigate('/emailverification')
     }
     return (
         <div className='register-container login-form w-50 mx-auto my-5'>
             <h2 className='text-primary'>Please Register</h2>
-            
+
             <Form onSubmit={submitHandle}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
@@ -63,7 +62,7 @@ const Register = () => {
             <p>Have You already register? <span className='btn text-danger' onClick={goToLogin}>Please Login</span></p>
             <SocialLogin></SocialLogin>
         </div>
-        
+
     );
 };
 

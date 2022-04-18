@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
+import EmailVerification from './components/Login/Register/EmailVerification/EmailVerification';
 import Register from './components/Login/Register/Register';
 import NotFound from './components/NotFound/NotFound';
 import RequireAuth from './components/RequireAuth/RequireAuth';
@@ -24,6 +25,7 @@ function App() {
         <Route path='/blog' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/emailverification' element={<EmailVerification></EmailVerification>}></Route>
         <Route path='/checkout/:serviceId' element={
           <RequireAuth>
             <Checkout></Checkout>
