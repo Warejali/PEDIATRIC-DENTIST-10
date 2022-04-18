@@ -45,12 +45,12 @@ const Register = () => {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name='email' />
+                    <Form.Control type="email" name='email'required/>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" name='password' />
+                    <Form.Control type="password" name='password' required/>
                 </Form.Group>
                 <Form.Group className={agree ? 'text-success mb-3' : 'mb-3'} controlId="formBasicCheckbox">
                     <Form.Check onClick={() => setAgree(!agree)} type="checkbox" name='checkbox' label="Accept term and conditions" />
