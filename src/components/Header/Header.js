@@ -21,14 +21,15 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
+                            <Nav.Link className='px-3 fw-bold' as={Link} to="/">HOME</Nav.Link>
                             <Nav.Link className='px-3 fw-bold' as={Link} to="services">SERVICES</Nav.Link>
                             <Nav.Link className='px-3 fw-bold' as={Link} to="about">ABOUT ME</Nav.Link>
                             <Nav.Link className='px-3 fw-bold' as={Link} to="blog">BLOGS</Nav.Link>
-                            
+
                             {
 
                                 user ? <button className='btn px-3 fw-bold' onClick={handleLogout}>Log Out</button> :
-                                <Nav.Link className='px-3 fw-bold' as={Link} to="login">LOGIN</Nav.Link>
+                                    <Nav.Link className='px-3 fw-bold' as={Link} to="login">LOGIN</Nav.Link>
                             }
 
                         </Nav>
