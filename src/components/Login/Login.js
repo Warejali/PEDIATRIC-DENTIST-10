@@ -48,9 +48,9 @@ const Login = () => {
         }
     }
 
-    
+
     if (error) {
-       <p className='text-danger'>Error: {error.message}</p>
+        return <p className='text-danger'>Error: {error.message}</p>
     }
 
     if (loading) {
@@ -79,6 +79,7 @@ const Login = () => {
                         <Form.Control onBlur={passwordInput} type="password" required />
                     </Form.Group>
                     <p className='text-danger'>{error}</p>
+                    
                     <Button className='mx-auto w-50 d-block' onClick={() => signInWithEmailAndPassword(email, password)} variant="primary" type="submit">
                         Login
                     </Button>
